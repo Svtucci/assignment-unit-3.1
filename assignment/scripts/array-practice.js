@@ -130,8 +130,66 @@ foodstring = favoriteFood.join(' and ');
 console.log(foodstring);
 
 
+
+
+
+
+// EXAMPLE OF WHAT COMPUTER RUNS
+
+// console.log(colors[0])
+// console.log(colors[1])
+// console.log(colors[1])
+
 // 4.h (STRETCH) TODO: Make a new array that combines 
 //     the favorite foods array with the animals array.
 //     Then log the new array.
 //     It should look something like:
 //     ['pizza', 'pasta', 'fish', 'cat', 'bird', 'dog']
+
+
+
+
+
+
+
+
+// 3a Loops practice during class
+// let food = ['salad', 'pizza', 'chicken'];
+// let max = food.length;
+// let start = 0;
+//
+// while(start < max) { //condition that will end loop
+//    console.log(food[start]);
+//    start += 1; // to avoid infinite loop
+//}
+
+
+// INSTRUCTOR EXAMPLES FOR 4G
+
+           //  0         1         2
+let colors = ['yellow', 'orange', 'green']; // last index in array is always length -1
+// 3 part for of loop
+let colorText = ''; 
+let colorIndex = 0;
+
+for (let i = 0; i < colors.length; i+= 1 ) {
+    console.log(colors[i]);
+    // if we are the last item...
+    if (i === colors.length - 1) {
+        colorText += colors[i];
+    }   else {
+        colorText += `${colors[i]} and `;
+    }
+}
+console.log(colorText);   // 'yellow and orange and green and'
+
+// doing it with for of loop
+
+for (let color of colors) {
+    if(colorIndex === colors.length -1) {
+        colorText += color;
+    } else {
+        colorText += color + ' and ';
+    }
+    colorIndex += 1;
+}
