@@ -22,11 +22,9 @@ let favoriteFood = ['Pizza', 'Burgers', 'HotDogs', 'Bagels', 'Oatmeal']
 
 console.log( 'My favorite foods are:', favoriteFood)
 
-
 // 2. Array.length - tells you how many items are in the array
 
 console.log('--- 2. Length of an array ---');
-
 
 // Example: How many animals are in the array? 
 
@@ -83,7 +81,6 @@ let removedFood = favoriteFood.pop();
 console.log('Removed the last favorite food', removedFood);
 console.log('The foods are now', favoriteFood);
 
-
 // Example: Add an animal to the beginning using Array.unshift
 animalArray.unshift('walrus');
 console.log(`Added an animal to beginning: ${animalArray}`);     // Why do we use the backticks and $ again?
@@ -130,60 +127,49 @@ foodstring = favoriteFood.join(' and ');
 console.log(foodstring);
 
 
-
-
-
-
-// EXAMPLE OF WHAT COMPUTER RUNS
-
-// console.log(colors[0])
-// console.log(colors[1])
-// console.log(colors[1])
-
 // 4.h (STRETCH) TODO: Make a new array that combines 
 //     the favorite foods array with the animals array.
 //     Then log the new array.
 //     It should look something like:
 //     ['pizza', 'pasta', 'fish', 'cat', 'bird', 'dog']
 
+let combinedArray = favoriteFood.concat(animalArray);
+console.log(combinedArray);
 
 
+/* 
+
+3a Loops practice during class
+let food = ['salad', 'pizza', 'chicken'];
+let max = food.length;
+let start = 0;
+
+while(start < max) { //condition that will end loop
+    console.log(food[start]);
+    start += 1; // to avoid infinite loop
+}
 
 
+INSTRUCTOR EXAMPLES FOR 4G
 
-
-
-// 3a Loops practice during class
-// let food = ['salad', 'pizza', 'chicken'];
-// let max = food.length;
-// let start = 0;
-//
-// while(start < max) { //condition that will end loop
-//    console.log(food[start]);
-//    start += 1; // to avoid infinite loop
-//}
-
-
-// INSTRUCTOR EXAMPLES FOR 4G
-
-           //  0         1         2
+                 0         1         2
 let colors = ['yellow', 'orange', 'green']; // last index in array is always length -1
-// 3 part for of loop
+ 3 part for of loop
 let colorText = ''; 
 let colorIndex = 0;
 
 for (let i = 0; i < colors.length; i+= 1 ) {
     console.log(colors[i]);
-    // if we are the last item...
+     if we are the last item...
     if (i === colors.length - 1) {
         colorText += colors[i];
     }   else {
         colorText += `${colors[i]} and `;
     }
 }
-console.log(colorText);   // 'yellow and orange and green and'
+console.log(colorText);    'yellow and orange and green and'
 
-// doing it with for of loop
+ doing it with for of loop
 
 for (let color of colors) {
     if(colorIndex === colors.length -1) {
@@ -193,3 +179,6 @@ for (let color of colors) {
     }
     colorIndex += 1;
 }
+
+
+*/
